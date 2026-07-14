@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Indicadores | Pulso Económico</title>
+  <meta name="description" content="Pulso Económico - Portal de noticias económicas de Bolivia. Información financiera, noticias nacionales e internacionales actualizadas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ========== PULSO ECONÓMICO PORTAL ========== */
+    .pulso-page { background: #f0f4f0; min-height: 100vh; }
+
+    /* Banner publicitario */
+    .pulso-ad-banner { background: #1a3a2a; position: relative; overflow: hidden; height: 90px; }
+    .pulso-ad-banner .carousel-track { display: flex; height: 100%; animation: scrollBanner 25s linear infinite; width: max-content; }
+    .pulso-ad-banner .carousel-track:hover { animation-play-state: paused; }
+    @keyframes scrollBanner { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .pulso-ad-banner .carousel-slide { width: auto; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .pulso-ad-banner .carousel-slide img { height: 100%; width: auto; object-fit: cover; }
+    .pulso-ad-banner .carousel-dots { display: none; /* Ocultamos los puntos porque es continuo */ }
+    .pulso-live-dot { position: absolute; bottom: 8px; right: 50px; display: flex; align-items: center; gap: 4px; z-index: 5; }
+    .pulso-live-dot span:first-child { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: livePing 1.5s infinite; }
+    .pulso-live-dot span:last-child { width: 6px; height: 6px; background: #16a34a; border-radius: 50%; }
+    @keyframes livePing { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.8); } 100% { opacity: 1; transform: scale(1); } }
+
+    /* Top bar roja */
+    .pulso-topbar { background: #dc2626; color: white; padding: 4px 1rem; display: flex; justify-content: flex-end; }
+    .pulso-topbar a { color: white; font-size: 0.95rem; font-weight: 500; text-decoration: none; }
+    .pulso-topbar a:hover { text-decoration: underline; }
+
+    /* Nav principal amarilla */
+    .pulso-nav-main { background: #f59e0b; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .pulso-nav-main .pulso-logo img { height: 44px; }
+    .pulso-nav-main .pulso-links { display: flex; gap: 1.5rem; align-items: center; }
+    .pulso-nav-main .pulso-links a { color: #1a1a1a; font-weight: 500; font-size: 1rem; text-decoration: none; font-family: var(--font-heading, 'Inter', sans-serif); transition: opacity 0.2s; }
+    .pulso-nav-main .pulso-links a:hover { opacity: 0.7; }
+    .pulso-nav-main .pulso-subscribe { background: #dc2626; color: white; border: none; padding: 0.4rem 1rem; border-radius: 4px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+    .pulso-nav-main .pulso-subscribe:hover { background: #b91c1c; }
+
+    /* Sub nav verde */
+    .pulso-nav-sub { background: #15803d; padding: 0.5rem 1rem; display: flex; justify-content: center; gap: 2rem; }
+    .pulso-nav-sub a { color: rgba(255,255,255,0.85); font-size: 1rem; text-decoration: none; font-family: var(--font-heading, 'Inter', sans-serif); transition: color 0.2s; }
+    .pulso-nav-sub a:hover { color: white; }
+
+    /* Mobile menu toggle for pulso */
+    .pulso-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .pulso-mobile-toggle span { display: block; width: 22px; height: 2px; background: #1a1a1a; margin: 5px 0; transition: 0.3s; }
+
+    /* Layout 2 columnas */
+    .pulso-layout { display: grid; grid-template-columns: 1fr 340px; gap: 2rem; max-width: 1280px; margin: 0 auto; padding: 2rem 1rem; }
+
+    /* Sección de noticias */
+    .pulso-news-section { background: white; border-radius: 8px; padding: 1.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+    .pulso-section-header { margin-bottom: 1.25rem; border-bottom: 3px solid #15803d; padding-bottom: 0.5rem; }
+    .pulso-section-header h2 { font-family: var(--font-heading, 'Inter', sans-serif); font-size: 1.8rem; font-weight: 800; color: #1a1a1a; margin: 0; }
+    .pulso-section-header p { color: #16a34a; font-size: 1rem; margin: 0.25rem 0 0; }
+
+    /* Subsección (Nacionales/Internacionales) */
+    .pulso-news-block { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .pulso-news-block-title { display: flex; align-items: center; gap: 8px; font-family: var(--font-heading, 'Inter', sans-serif); font-size: 1.3rem; font-weight: 700; color: #15803d; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e5e7eb; }
+    .pulso-news-block-title::before { content: ''; width: 8px; height: 8px; background: #16a34a; border-radius: 50%; flex-shrink: 0; }
+    .pulso-news-block-title.intl { color: #dc2626; }
+    .pulso-news-block-title.intl::before { background: #dc2626; }
+
+    /* Item de noticia */
+    .pulso-news-item { display: flex; align-items: flex-start; gap: 12px; padding: 0.85rem 0; border-bottom: 1px solid #f3f4f6; transition: background 0.2s; cursor: pointer; text-decoration: none; color: inherit; }
+    .pulso-news-item:last-child { border-bottom: none; }
+    .pulso-news-item:hover { background: #f9fafb; }
+    .pulso-news-item .news-border { width: 3px; min-height: 40px; background: #16a34a; border-radius: 3px; flex-shrink: 0; align-self: stretch; }
+    .pulso-news-item.intl .news-border { background: #dc2626; }
+    .pulso-news-item .news-content { flex: 1; }
+    .pulso-news-item .news-title { font-family: var(--font-heading, 'Inter', sans-serif); font-size: 1.1rem; font-weight: 600; color: #1a1a1a; margin: 0 0 6px; line-height: 1.3; }
+    .pulso-news-item .news-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .pulso-news-item .news-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .pulso-news-item .news-badge.economia { background: #dcfce7; color: #15803d; }
+    .pulso-news-item .news-badge.laboral { background: #fef3c7; color: #b45309; }
+    .pulso-news-item .news-badge.agricultura { background: #fce7f3; color: #be185d; }
+    .pulso-news-item .news-badge.politica { background: #dbeafe; color: #1d4ed8; }
+    .pulso-news-item .news-badge.general { background: #f3f4f6; color: #6b7280; }
+    .pulso-news-item .news-date { font-size: 0.85rem; color: #9ca3af; }
+    .pulso-news-item .news-arrow { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #f3f4f6; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 0.85rem; transition: all 0.2s; align-self: center; }
+    .pulso-news-item:hover .news-arrow { background: #16a34a; color: white; }
+    .pulso-news-item.intl:hover .news-arrow { background: #dc2626; }
+
+    .pulso-ver-mas { display: inline-flex; align-items: center; gap: 6px; background: #dc2626; color: white; padding: 0.5rem 1.25rem; border-radius: 6px; font-size: 1rem; font-weight: 600; text-decoration: none; margin-top: 0.75rem; transition: background 0.2s; }
+    .pulso-ver-mas:hover { background: #b91c1c; }
+
+    /* Sidebar */
+    .pulso-sidebar-card { background: white; border-radius: 8px; padding: 1.25rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 1.25rem; }
+    .pulso-sidebar-title { font-family: var(--font-heading, 'Inter', sans-serif); font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #16a34a; text-align: center; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .pulso-sidebar-title::before, .pulso-sidebar-title::after { content: '●'; font-size: 6px; color: #16a34a; }
+
+    /* Patrocinadores grid */
+    .pulso-sponsors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .pulso-sponsor { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; padding: 0.75rem; border-radius: 8px; transition: all 0.2s; }
+    .pulso-sponsor:hover { background: #f0fdf4; transform: translateY(-2px); }
+    .pulso-sponsor .sponsor-logo { width: 80px; height: 80px; border-radius: 50%; border: 2px solid #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; background: white; margin-bottom: 6px; }
+    .pulso-sponsor .sponsor-logo img { max-width: 60px; max-height: 60px; object-fit: contain; }
+    .pulso-sponsor .sponsor-name { font-size: 0.85rem; font-weight: 600; color: #16a34a; text-align: center; }
+
+    /* Featured partner logos (SICOES, BDP style) */
+    .pulso-partner-logos { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .pulso-partner-logos img { max-height: 50px; object-fit: contain; }
+    .pulso-badge-new { display: inline-block; background: #dc2626; color: white; padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+
+    /* Herramientas rápidas */
+    .pulso-tool-card { display: flex; align-items: center; gap: 12px; padding: 0.85rem; border-radius: 8px; background: #f0fdf4; margin-bottom: 0.75rem; text-decoration: none; color: inherit; transition: all 0.2s; }
+    .pulso-tool-card:hover { background: #dcfce7; transform: translateX(4px); }
+    .pulso-tool-card i { font-size: 1.5rem; color: #16a34a; width: 32px; text-align: center; }
+    .pulso-tool-card .tool-info h4 { margin: 0; font-size: 1rem; font-weight: 700; color: #1a1a1a; }
+    .pulso-tool-card .tool-info p { margin: 0; font-size: 0.85rem; color: #6b7280; }
+
+    /* Footer de Pulso */
+    .pulso-footer { background: #15803d; color: white; padding: 2rem 1rem; margin-top: 2rem; }
+    .pulso-footer-grid { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .pulso-footer h4 { font-family: var(--font-heading, 'Inter', sans-serif); font-size: 1.25rem; margin: 0 0 0.75rem; }
+    .pulso-footer p, .pulso-footer a { color: rgba(255,255,255,0.8); font-size: 1rem; text-decoration: none; }
+    .pulso-footer a:hover { color: white; }
+    .pulso-footer-socials { display: flex; gap: 0.75rem; margin-top: 0.75rem; }
+    .pulso-footer-socials a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: white; transition: background 0.2s; }
+    .pulso-footer-socials a:hover { background: rgba(255,255,255,0.3); }
+    .pulso-footer-bottom { max-width: 1280px; margin: 1.5rem auto 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); text-align: center; }
+    .pulso-footer-bottom p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin: 0; }
+
+    /* Empty state */
+    .pulso-empty { text-align: center; padding: 2rem; color: #9ca3af; }
+    .pulso-empty i { font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.5; }
+
+    /* Floating Conversor Button */
+    .floating-conversor {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #15803d;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1000;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .floating-conversor:hover {
+      transform: scale(1.1);
+      background: #16a34a;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .floating-conversor {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .pulso-loading { text-align: center; padding: 2rem; }
+    .pulso-loading i { color: #16a34a; }
+
+    /* Responsive */
+    @media (min-width: 1025px) {
+      /* Ampliar tipografía solo en PC para mejor lectura sin necesidad de zoom */
+      .pulso-section-header h2 { font-size: 2.2rem; }
+      .pulso-section-header p { font-size: 1.15rem; }
+      .pulso-news-block-title { font-size: 1.5rem; }
+      .pulso-news-item .news-title { font-size: 1.3rem; }
+      .pulso-news-item .news-date { font-size: 1rem; }
+      .pulso-news-item .news-badge { font-size: 0.9rem; padding: 4px 10px; }
+      .pulso-news-item .news-arrow { width: 40px; height: 40px; font-size: 1rem; }
+      .pulso-ver-mas { font-size: 1.15rem; padding: 0.75rem 1.5rem; }
+      .pulso-sidebar-title { font-size: 1.2rem; }
+      .pulso-sponsor .sponsor-name { font-size: 1rem; }
+      .pulso-tool-card .tool-info h4 { font-size: 1.2rem; }
+      .pulso-tool-card .tool-info p { font-size: 1rem; }
+      .pulso-topbar a { font-size: 1.1rem; }
+      .pulso-nav-main .pulso-links a { font-size: 1.2rem; }
+      .pulso-nav-main .pulso-subscribe { font-size: 1.2rem; padding: 0.5rem 1.25rem; }
+      .pulso-nav-sub a { font-size: 1.15rem; }
+    }
+
+    @media (max-width: 1024px) {
+      .pulso-layout { grid-template-columns: 1fr; }
+      .pulso-sidebar { order: -1; }
+      .pulso-sponsors-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .pulso-ad-banner { height: 70px; }
+      .pulso-nav-main .pulso-links { display: none; }
+      .pulso-mobile-toggle { display: block; }
+      .pulso-nav-sub { flex-wrap: wrap; gap: 0.75rem; }
+      .pulso-sponsors-grid { grid-template-columns: 1fr 1fr; }
+      .pulso-footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .pulso-nav-sub { gap: 0.5rem; }
+      .pulso-nav-sub a { font-size: 0.75rem; }
+    }
+  </style>
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jfif">
+</head>
+<body class="pulso-page">
+
+  <!-- ========== BANNER PUBLICITARIO ========== -->
+  <section class="pulso-ad-banner">
+    <div class="carousel-track" id="pulso-banner-track">
+      <!-- Grupo 1 -->
+      <div class="carousel-slide">
+        <img src="assets/images/pulsoeconomico/Picsart_25-09-22_16-19-29-933.jpg.jpeg" alt="Pulso Económico Banner 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="assets/images/pulsoeconomico/Picsart_25-09-22_16-32-16-566.jpg.jpeg" alt="Pulso Económico Banner 2">
+      </div>
+      <!-- Grupo 2 (Clonado para scroll infinito) -->
+      <div class="carousel-slide">
+        <img src="assets/images/pulsoeconomico/Picsart_25-09-22_16-19-29-933.jpg.jpeg" alt="Pulso Económico Banner 1">
+      </div>
+      <div class="carousel-slide">
+        <img src="assets/images/pulsoeconomico/Picsart_25-09-22_16-32-16-566.jpg.jpeg" alt="Pulso Económico Banner 2">
+      </div>
+    </div>
+    <div class="carousel-dots" id="pulso-banner-dots"></div>
+    <div class="pulso-live-dot"><span></span><span></span></div>
+  </section>
+
+  <!-- ========== TOP BAR ROJA ========== -->
+  <div class="pulso-topbar">
+    <a href="index.html">Fundación Hecho en Bolivia</a>
+  </div>
+
+  <!-- ========== NAV PRINCIPAL AMARILLA ========== -->
+  <nav class="pulso-nav-main">
+    <div class="pulso-logo">
+      <a href="pulso-economico.html">
+        <img loading="lazy" src="assets/images/pulsoeconomico/pulso%20ECO.png" alt="Pulso Económico" style="max-height: 45px; width: auto; object-fit: contain;">
+      </a>
+    </div>
+    <div class="pulso-links">
+      <a href="#" id="pulso-publicidad-link">Publicidad</a>
+      <a href="pulso-indicadores.html">Indicadores</a>
+      <a href="assets/REDIRECCIONES/EVOLUCION%20DEL%20SALARIO%20MINIMO%20NACIONAL.pdf" id="pulso-smn-link" target="_blank">Evol. SMN</a>
+      <a href="assets/REDIRECCIONES/IPC%20PAISES%20VECINOS%202025.pdf" id="pulso-ipc-link" target="_blank">IPC Vecinos</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <button class="pulso-subscribe" id="pulso-subscribe-btn">Suscríbete</button>
+      <button class="pulso-mobile-toggle" id="pulso-mobile-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== SUB NAV VERDE ========== -->
+  <nav class="pulso-nav-sub" id="pulso-subnav">
+    <a href="#noticias">Noticias</a>
+    <a href="assets/REDIRECCIONES/TABLA%20COTIZACIONES.pdf" id="pulso-cotizacion-link" target="_blank">Cotización</a>
+    <a href="pulso-articulos.html">Artículos</a>
+    <a href="pulso-2minutos.html">2 minutos</a>
+    <a href="pulso-precios.html">Precios</a>
+    <a href="assets/REDIRECCIONES/CARGAS%20SOCIALES.pdf" id="pulso-cargas-link" target="_blank">Cargas Sociales</a>
+  </nav>
+
+  <!-- ========== LAYOUT PRINCIPAL ========== -->
+  <div class="pulso-layout">
+    
+    <!-- COLUMNA IZQUIERDA: NOTICIAS -->
+    
+    <main style="grid-column: 1 / -1;">
+      <div class="pulso-news-section">
+        <div class="pulso-section-header">
+          <h1 style="font-size: 1.8rem; font-family: var(--font-heading, \'Inter\', sans-serif); font-weight: 800; margin: 0;">Indicadores Económicos</h1>
+          <p>Documentos disponibles para lectura y descarga</p>
+        </div>
+        <div style="margin-top: 2rem; background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e5e7eb;">
+            <iframe id="pulso-tool-indicadores-frame" src="assets/images/pulsoeconomico/indicadores/INDICADORES%20ECONOMICOS.pdf#toolbar=0" style="width: 100%; height: 800px; border: none; background: #f1f5f9; border-radius: 8px;"></iframe>
+          </div>
+    </main>
+    
+  </div>
+
+  <!-- ========== FOOTER PULSO ========== -->
+  <footer class="pulso-footer">
+    <div class="pulso-footer-grid">
+      <div>
+        <h4>Contacto</h4>
+        <p><a href="https://www.google.com/maps/search/Fundación+Hecho+en+Bolivia,+Cochabamba" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'"><i class="fas fa-map-marker-alt" style="margin-right: 0.25rem;"></i>Calle Obispo Anaya Nro. 518, entre calle J. Quintín Mendoza y Calle J. Aguirre Acharo.</a></p>
+        <p>Cochabamba, Bolivia</p>
+        <p style="margin-top: 0.5rem;"><a href="https://wa.me/59163889148" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'"><i class="fas fa-phone"></i> +591 63889148</a></p>
+        <p><a href="mailto:fundacionhechoenbolivia@gmail.com" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'"><i class="fas fa-envelope"></i> fundacionhechoenbolivia@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <div class="pulso-footer-socials">
+          <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.linkedin.com/company/fundacion-hecho-en-bolivia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+      </div>
+      <div>
+        <h4>Pulso Económico</h4>
+        <p>Tu fuente de información económica en Bolivia</p>
+      </div>
+    </div>
+    <div class="pulso-footer-bottom">
+      <p>© 2026 Pulso Económico. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/public-db.js"></script>
+  <script>
+    // Mobile toggle
+    const mobileBtn = document.getElementById('pulso-mobile-btn');
+    const linksEl = document.querySelector('.pulso-links');
+    if (mobileBtn && linksEl) {
+      mobileBtn.addEventListener('click', () => {
+        linksEl.style.display = linksEl.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+
+    // Banner carousel is now handled by CSS animation (marquee)
+  </script>
+  <!-- Floating Conversor Button -->
+  <a href="https://www.bcb.gob.bo/librerias/indicadores/otras/ultimo.php" target="_blank" class="floating-conversor" title="Conversor de Moneda">
+    <i class="fas fa-exchange-alt"></i>
+  </a>
+</body>
+</html>

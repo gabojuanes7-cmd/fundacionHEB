@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Voluntariado | Fundación Hecho en Bolivia</title>
+  <meta name="description" content="Únete al programa de voluntariado de la Fundación Hecho en Bolivia.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jfif">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Inicio">
+        <div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav__link ">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link ">La Fundación <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="quienes-somos.html" class="dropdown__link">Quiénes Somos</a></li>
+            <li><a href="directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="asistencia-tecnica.html" class="dropdown__link">Asistencia Técnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="sistemas-gestion.html" class="dropdown__link">Sistemas de Gestión</a></li>
+                <li><a href="propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="pulso-economico.html" class="dropdown__link">Pulso Económico</a></li>
+                <li><a href="revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="economia-creativa.html" class="dropdown__link">Economía Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="galeria.html" class="dropdown__link">Galería</a></li>
+            <li><a href="cunas.html" class="dropdown__link">Cuñas Radiales</a></li>
+            <li><a href="spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="noticias.html" class="nav__link ">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Únete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Voluntariado</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Forma parte del equipo y contribuye al desarrollo de la producción nacional con tus talentos.</p>
+      </div>
+    </section>
+
+    <!-- Info Voluntariado -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--2" style="gap: 4rem; align-items: center;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Equipo de Voluntarios" style="width: 100%; display: block;">
+          </div>
+          <div>
+            <span class="section-label">Únete a Nosotros</span>
+            <h2 class="section-title">¿Por qué ser <span class="text-gradient">Voluntario?</span></h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              Únete a nuestra misión de impulsar el valor de las ideas en acción. Juntos construimos cambio y desarrollo país. Generamos impacto social. 'Hecho en Bolivia'.
+            </p>
+            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+              <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.2rem; margin-right: 1rem;"></i> Desarrollo profesional y personal.</li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.2rem; margin-right: 1rem;"></i> Ampliación de red de contactos (Networking).</li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.2rem; margin-right: 1rem;"></i> Impacto real en la economía nacional.</li>
+              <li style="margin-bottom: 1rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: var(--color-primary); font-size: 1.2rem; margin-right: 1rem;"></i> Certificado de participación avalado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario -->
+    <section class="section section--gray">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem;">
+          <h2 class="section-title">Formulario de <span class="text-gradient">Inscripción</span></h2>
+          <p style="color: var(--color-text-muted);">Completa el formulario y nos pondremos en contacto contigo pronto.</p>
+        </div>
+
+        <div class="card" style="max-width: 600px; margin: 0 auto; padding: 3rem;">
+            <form id="volunteer-form">
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nombre Completo</label>
+              <input type="text" id="vol-nombre" placeholder="Ej. Juan Pérez" required class="form-control">
+            </div>
+            
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Correo Electrónico</label>
+              <input type="email" id="vol-correo" placeholder="juan@ejemplo.com" required class="form-control">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Área de Interés</label>
+              <select id="vol-area" required class="form-control">
+                <option value="">Selecciona un área</option>
+                <option value="eventos">Organización de eventos</option>
+                <option value="marketing">Marketing y Redes Sociales</option>
+                <option value="proyectos">Proyectos</option>
+                <option value="capacitacion">Capacitación</option>
+                <option value="adm">Adm. Y Contabilidad</option>
+                <option value="sistemas">Sistemas</option>
+                <option value="otros">Otros</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 2rem;">
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">¿Por qué quieres unirte?</label>
+              <textarea id="vol-mensaje" rows="4" placeholder="Cuéntanos brevemente tu motivación..." required class="form-control" style="resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" id="btn-enviar-vol" class="btn btn--primary" style="width: 100%;">Enviar Solicitud</button>
+            <div id="vol-loading" style="display:none; text-align: center; margin-top: 1rem;"><i class="fas fa-spinner fa-spin"></i> Enviando...</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid--4">
+        <div>
+          <h3 class="footer__title">Hecho en Bolivia</h3>
+          <p class="footer__text">Promoviendo la producción nacional, la calidad y el desarrollo económico de nuestro país.</p>
+        </div>
+        <div>
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__links">
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Legal</h3>
+          <ul class="footer__links">
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Síguenos</h3>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        © 2026 Fundación Hecho en Bolivia. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script type="module" src="js/public-db.js"></script>
+</body>
+</html>

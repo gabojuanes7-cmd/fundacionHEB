@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Proyectos | Fundación Hecho en Bolivia</title>
+  <meta name="description" content="Conoce los proyectos de la Fundación Hecho en Bolivia.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jfif">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Inicio">
+        <div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav__link ">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link ">La Fundación <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="quienes-somos.html" class="dropdown__link">Quiénes Somos</a></li>
+            <li><a href="directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="asistencia-tecnica.html" class="dropdown__link">Asistencia Técnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="sistemas-gestion.html" class="dropdown__link">Sistemas de Gestión</a></li>
+                <li><a href="propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="pulso-economico.html" class="dropdown__link">Pulso Económico</a></li>
+                <li><a href="revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="economia-creativa.html" class="dropdown__link">Economía Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="galeria.html" class="dropdown__link">Galería</a></li>
+            <li><a href="cunas.html" class="dropdown__link">Cuñas Radiales</a></li>
+            <li><a href="spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="noticias.html" class="nav__link ">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Únete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Proyectos Destacados</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Descubre las iniciativas que estamos llevando a cabo para fortalecer la industria y el comercio boliviano.</p>
+      </div>
+    </section>
+
+    <!-- Lista de Proyectos -->
+    <section class="section">
+      <div class="container">
+        <!-- Proyecto 1 -->
+        <div class="split" style="gap: 4rem; align-items: center; margin-bottom: 6rem;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1542744094-24638ea0bc40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Valor Agregado de Origen Nacional" style="width: 100%; display: block;">
+          </div>
+          <div>
+            <span class="section-label">Certificación</span>
+            <h2 class="section-title">Valor Agregado de Origen Nacional <span class="text-gradient">(VAON)</span></h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              Es una certificación creada por la Fundación Hecho en Bolivia que certifica las contribuciones porcentuales en la formación en el costo directo unitario de los diversos componentes de origen nacional que se utilizan para producir una mercancía-producto. ¡Garantía de Origen!
+            </p>
+            <div style="display: flex; gap: 1rem;">
+              <a href="#" class="btn btn--primary">Ver Detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 (Invertido) -->
+        <div class="split" style="gap: 4rem; align-items: center; margin-bottom: 6rem;">
+          <div style="order: 2;">
+            <span class="section-label">Plataforma Digital</span>
+            <h2 class="section-title">Red de <span class="text-gradient">Marcas</span></h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              Es un ecosistema digital que conecta a productores nacionales con distribuidores, comercializadores y consumidores finales. A través de su catálogo de productos certificados, facilita la identificación de negocios bolivianos y se convierte en una vitrina internacional que amplía el alcance de las PYMEs.
+            </p>
+            <div style="display: flex; gap: 1rem;">
+              <a href="#" class="btn btn--primary">Explorar Red</a>
+            </div>
+          </div>
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); order: 1;">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Red de Marcas" style="width: 100%; display: block;">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid--4">
+        <div>
+          <h3 class="footer__title">Hecho en Bolivia</h3>
+          <p class="footer__text">Promoviendo la producción nacional, la calidad y el desarrollo económico de nuestro país.</p>
+        </div>
+        <div>
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__links">
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Legal</h3>
+          <ul class="footer__links">
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Políticas de Privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__title">Síguenos</h3>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        © 2026 Fundación Hecho en Bolivia. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fundación Hecho en Bolivia — Promoviendo lo Nuestro</title>
+  <meta name="description" content="Fundación Hecho en Bolivia: impulsamos el desarrollo económico del país administrando la Marca País y fomentando la producción nacional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Prevent Dark Mode Flash -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jfif">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header header--transparent" data-transparent="true">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Inicio">
+        <div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div>
+      </a>
+
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav__link nav__link--active">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link ">La Fundación <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="quienes-somos.html" class="dropdown__link">Quiénes Somos</a></li>
+            <li><a href="directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="asistencia-tecnica.html" class="dropdown__link">Asistencia Técnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="sistemas-gestion.html" class="dropdown__link">Sistemas de Gestión</a></li>
+                <li><a href="propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="pulso-economico.html" class="dropdown__link">Pulso Económico</a></li>
+                <li><a href="revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="economia-creativa.html" class="dropdown__link">Economía Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="galeria.html" class="dropdown__link">Galería</a></li>
+            <li><a href="cunas.html" class="dropdown__link">Cuñas Radiales</a></li>
+            <li><a href="spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="noticias.html" class="nav__link ">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Únete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ACCORDION ==================== -->
+    <section class="hero-accordion" id="hero">
+      <!-- Panel Rojo -->
+      <div class="accordion-panel panel-red" data-target="#featured-projects">
+        <div class="panel-bg" style="background-image: url('assets/images/project-feria.png');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2 class="panel-title">PROYECTOS</h2>
+          <div class="panel-hidden">
+            <p>Descubre iniciativas como EXPOINDUSTRIA y ferias a nivel nacional.</p>
+            <a href="proyectos.html" class="btn btn--outline btn--sm">Explorar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel Amarillo -->
+      <div class="accordion-panel panel-yellow" data-target="#fines">
+        <div class="panel-bg" style="background-image: url('assets/images/project-marca-pais.png');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2 class="panel-title">IDENTIDAD</h2>
+          <div class="panel-hidden">
+            <p>Conoce la administración de la Marca País y nuestra historia.</p>
+            <a href="quienes-somos.html" class="btn btn--outline btn--sm">Explorar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel Verde -->
+      <div class="accordion-panel panel-green" data-target="#about-preview">
+        <div class="panel-bg" style="background-image: url('assets/images/gallery-landscape.png');"></div>
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <h2 class="panel-title">SERVICIOS</h2>
+          <div class="panel-hidden">
+            <p>Legislación empresarial, trámites y promoción comercial.</p>
+            <a href="sello.html" class="btn btn--outline btn--sm">Explorar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Central Branding -->
+      <div class="accordion-branding">
+        <img loading="lazy" src="assets/images/logo-hecho-en-bolivia.jpg" alt="Fundación Hecho en Bolivia" class="accordion-branding__logo">
+      </div>
+      <div class="scroll-down-hint">Scroll para continuar</div>
+    </section>
+
+<!-- ==================== QUIÉNES SOMOS (Preview) ==================== -->
+    <section class="section" id="about-preview">
+      <div class="container">
+        <div class="split">
+          <div class="split__image animate-slide-left">
+            <img src="assets/images/about-artisans.png" alt="Producción Nacional" loading="lazy" width="640" height="480">
+          </div>
+          <div class="split__content animate-slide-right">
+            <span class="section-label">Nuestra Fundación</span>
+            <h2 class="section-title">El Orgullo de lo <span class="text-gradient">Nuestro</span></h2>
+            <p>
+              Nace un 3 de diciembre de 2014. Producto de un grupo de personas, para crear una institución sin fines de lucro que no sea gremial, ni sectorial, ni Departamental; Ser nacional, transversal a todos los sectores.
+            </p>
+            <p>
+              La FUNDACIÓN es la consolidación de la Campaña "Consume lo Nuestro" que inició el año 2001 con resultados exitosos, hoy es nuestra distinción como país.
+            </p>
+            <a href="quienes-somos.html" class="btn btn--primary">Nuestra Misión y Visión <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS ==================== -->
+    <section class="section section--dark" id="stats">
+      <div class="container">
+        <div class="stats">
+          <div class="stat animate-on-scroll">
+            <div class="stat__icon"><i class="fas fa-calendar-alt"></i></div>
+            <div>
+              <div class="stat__number"><span data-counter="25" data-suffix="+">0</span><span class="suffix">+</span></div>
+              <div class="stat__label">AÑOS DESDE LA CAMPAÑA</div>
+            </div>
+          </div>
+          <div class="stat animate-on-scroll animate-delay-1">
+            <div class="stat__icon"><i class="fas fa-handshake"></i></div>
+            <div>
+              <div class="stat__number"><span data-counter="9" data-suffix="+">0</span><span class="suffix">+</span></div>
+              <div class="stat__label">MIEMBROS FUNDADORES</div>
+            </div>
+          </div>
+          <div class="stat animate-on-scroll animate-delay-2">
+            <div class="stat__icon"><i class="fas fa-store"></i></div>
+            <div>
+              <div class="stat__number"><span data-counter="10" data-suffix="+">0</span><span class="suffix">+</span></div>
+              <div class="stat__label">SERVICIOS</div>
+            </div>
+          </div>
+          <div class="stat animate-on-scroll animate-delay-3">
+            <div class="stat__icon"><i class="fas fa-flag"></i></div>
+            <div>
+              <div class="stat__number"><span data-counter="1">0</span></div>
+              <div class="stat__label">MARCA "HECHO EN BOLIVIA"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROYECTOS DESTACADOS ==================== -->
+    <section class="section" id="featured-projects">
+      <div class="container">
+        <div class="text-center animate-on-scroll">
+          <span class="section-label">Lo que hacemos</span>
+          <h2 class="section-title">Iniciativas <span class="text-gradient">Clave</span></h2>
+        </div>
+
+        <div class="grid grid--3 mt-8">
+          <!-- Proyecto 1 -->
+          <div class="card animate-on-scroll animate-delay-1">
+            <div class="card__image">
+              <img src="assets/images/project-feria.png" alt="EXPOINDUSTRIA" loading="lazy" width="640" height="480">
+              <span class="card__badge">Feria Nacional</span>
+            </div>
+            <div class="card__body">
+              <span class="card__category">Comercio</span>
+              <h3 class="card__title">Promoviendo el Producto Nacional</h3>
+              <p class="card__text">Gracias al alcance digital, amplía la presencia de las marcas emergentes, fortaleciendo el valor agregado nacional y proyectando lo Hecho en Bolivia hacia lo internacional.</p>
+            </div>
+            <div class="card__footer">
+              <a href="proyectos.html" class="btn btn--ghost btn--sm">Conoce más <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+                    <!-- Proyecto 2 -->
+          <div class="card animate-on-scroll animate-delay-2">
+            <div class="card__image">
+              <img src="assets/images/project-capacitacion.png" alt="Comité CCI" loading="lazy" width="640" height="480">
+            </div>
+            <div class="card__body">
+              <span class="card__category">capacitacion</span>
+              <h3 class="card__title">Academia FHB</h3>
+              <p class="card__text">Programa integral de formación diseñado para emprendedores y PyMEs que buscan ser exitosos. A través de cursos online, mentorías, módulos de autoaprendisaje y una comunidad colaborativa.</p>
+            </div>
+            <div class="card__footer">
+              <a href="https://www.facebook.com/CadenaHB/?locale=es_LA" class="btn btn--ghost btn--sm">Conoce más <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 -->
+          <div class="card animate-on-scroll animate-delay-3">
+            <div class="card__image">
+              <img src="assets/images/project-marca-pais.png" alt="Marca País" loading="lazy" width="640" height="480">
+            </div>
+            <div class="card__body">
+              <span class="card__category">Identidad</span>
+              <h3 class="card__title">Gestión Marca País</h3>
+              <p class="card__text">Administración y posicionamiento de la marca "HECHO EN BOLIVIA" como sello distintivo de origen, calidad y distinción de Origen.</p>
+            </div>
+            <div class="card__footer">
+              <a href="proyectos.html" class="btn btn--ghost btn--sm">Conoce más <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FINES ==================== -->
+    <section class="section section--dark" id="fines">
+      <div class="container">
+        <div class="text-center animate-on-scroll mb-8">
+          <span class="section-label">Objetivos estratégicos</span>
+          <h2 class="section-title">Nuestros <span class="text-gradient">Pilares</span></h2>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="feature-card animate-on-scroll animate-delay-1">
+            <div class="feature-card__icon"><i class="fas fa-link"></i></div>
+            <h3 class="feature-card__title">Vincular</h3>
+            <p class="feature-card__text">Conectar a los demandantes de procesos y servicios con los productores locales.</p>
+          </div>
+          <div class="feature-card animate-on-scroll animate-delay-2">
+            <div class="feature-card__icon"><i class="fas fa-globe"></i></div>
+            <h3 class="feature-card__title">Promocionar</h3>
+            <p class="feature-card__text">Exponer la oferta productiva boliviana en mercados nacionales e internacionales.</p>
+          </div>
+          <div class="feature-card animate-on-scroll animate-delay-3">
+            <div class="feature-card__icon"><i class="fas fa-flag"></i></div>
+            <h3 class="feature-card__title">Marca "Hecho en Bolivia"</h3>
+            <p class="feature-card__text">Desarrollar, implementar y administrar la identidad de lo "Hecho en Bolivia".</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PUBLICACIONES Y ACTIVIDADES ==================== -->
+    <section class="section" id="publicaciones-actividades">
+      <div class="container">
+        <div class="split pub-act-grid">
+          
+          <!-- Columna Publicaciones -->
+          <div class="pub-col">
+            <div class="section-header--left animate-on-scroll">
+              <h2 class="section-title text-gradient section-title--sm">Publicaciones</h2>
+            </div>
+            <div id="home-publicaciones-container" class="grid grid--2 pub-inner-grid">
+              <!-- Se cargarán dinámicamente -->
+            </div>
+          </div>
+
+          <!-- Columna Actividades -->
+          <div class="act-col">
+            <div class="section-header--left animate-on-scroll">
+              <h2 class="section-title text-gradient section-title--sm">Actividades</h2>
+            </div>
+            <div id="home-actividades-container" class="grid grid--2 pub-inner-grid">
+              <!-- Se cargarán dinámicamente -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NOTICIAS ==================== -->
+    <section class="section section--dark" id="ultimas-noticias">
+      <div class="container">
+        <div class="split news-columns">
+          <!-- Nacionales -->
+          <div>
+            <h3 class="news-col-title">Noticias Nacionales</h3>
+            <div id="home-news-nacional-container" class="grid news-col-grid">
+              <!-- Carga dinámica -->
+            </div>
+          </div>
+
+          <!-- Internacionales -->
+          <div>
+            <h3 class="news-col-title">Noticias Internacionales</h3>
+            <div id="home-news-internacional-container" class="grid news-col-grid">
+              <!-- Carga dinámica -->
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="noticias.html" class="btn btn--outline">Ver todas las noticias <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DIRECTORIO ==================== -->
+    <section class="section" id="home-directorio">
+      <div class="container text-center">
+        <h3 class="directorio-section-title">Empresas Miembro</h3>
+        <div class="scroll-wrapper">
+          <button class="scroll-btn scroll-btn-prev" onclick="scrollContainer('home-empresas-container', -300)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div id="home-empresas-container" class="empresas-scroll empresas-scroll--mb">
+            <!-- Dinámico -->
+          </div>
+          <button class="scroll-btn scroll-btn-next" onclick="scrollContainer('home-empresas-container', 300)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <h3 class="directorio-section-title">Alianza Interinstitucional</h3>
+        <div class="scroll-wrapper">
+          <button class="scroll-btn scroll-btn-prev" onclick="scrollContainer('home-alianzas-container', -300)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div id="home-alianzas-container" class="empresas-scroll">
+            <!-- Dinámico -->
+          </div>
+          <button class="scroll-btn scroll-btn-next" onclick="scrollContainer('home-alianzas-container', 300)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <h2 class="cta-section__title animate-on-scroll">¿Quieres ser parte del cambio?</h2>
+        <p class="cta-section__text animate-on-scroll animate-delay-1">Únete a nuestra misión de impulsar el valor de las ideas en acción. Juntos construimos cambio y desarrollo país. Generamos impacto social.</p>
+        <div class="animate-on-scroll animate-delay-2">
+          <a href="contacto.html" class="btn btn--secondary btn--lg"><i class="fas fa-envelope"></i> Contáctanos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo footer__logo"><div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div></a>
+          <p>Fundación sin fines de lucro dedicada a promover el desarrollo económico y la Marca "HECHO EN BOLIVIA".</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Enlaces</h4>
+          <ul class="footer__links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="capacitate.html"><i class="fas fa-chevron-right"></i> Academia FHB</a></li>
+            <li><a href="proyectos.html"><i class="fas fa-chevron-right"></i> Proyectos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Fundación</h4>
+          <ul class="footer__links">
+            <li><a href="quienes-somos.html"><i class="fas fa-chevron-right"></i> Misión y Visión</a></li>
+            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Cont�ctanos</h4>
+          <a href="https://maps.google.com/?q=Cochabamba,Bolivia" target="_blank" class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Cochabamba, Bolivia</span></a>
+          <a href="mailto:fundacionhechoenbolivia@gmail.com" class="footer__contact-item"><i class="fas fa-envelope"></i><span>fundacionhechoenbolivia@gmail.com</span></a>
+          <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" class="footer__contact-item"><i class="fab fa-whatsapp"></i><span>+591 71411888</span></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 <strong>Fundación Hecho en Bolivia</strong>. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+  
+  <script>
+    function scrollContainer(id, amount) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollBy({ left: amount, behavior: 'smooth' });
+      }
+    }
+  </script>
+  
+  <script src="js/main.js"></script>
+  <script type="module" src="js/public-db.js"></script>
+</body>
+</html>

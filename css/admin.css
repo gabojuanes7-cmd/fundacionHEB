@@ -1,0 +1,340 @@
+/* ==========================================================================
+   ESTILOS PREMIUM PARA EL PANEL DE ADMINISTRACIÓN
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --admin-sidebar-bg: #111827;
+  --admin-sidebar-text: #9ca3af;
+  --admin-sidebar-hover: #1f2937;
+  --admin-sidebar-active: #ffffff;
+  --admin-primary: #10b981; /* Verde Hecho en Bolivia */
+  --admin-primary-hover: #059669;
+  --admin-bg: #f3f4f6;
+  --admin-card-bg: #ffffff;
+  --admin-text-main: #1f2937;
+  --admin-text-muted: #6b7280;
+  --admin-border: #e5e7eb;
+  --admin-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --admin-radius: 12px;
+  --admin-radius-sm: 6px;
+}
+
+.admin-body {
+  background-color: var(--admin-bg);
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  color: var(--admin-text-main);
+  overflow: hidden;
+}
+
+/* --- SECCIÓN DE LOGIN --- */
+.admin-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.admin-login-card {
+  background: var(--admin-card-bg);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: var(--admin-shadow-lg);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.admin-login-card h2 {
+  color: var(--admin-text-main);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.admin-login-card p {
+  color: var(--admin-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --- FORMULARIOS GLOBALES --- */
+.form-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--admin-text-main);
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-sm);
+  background: #f9fafb;
+  color: var(--admin-text-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--admin-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Botones */
+.btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--admin-radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn--primary {
+  background-color: var(--admin-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: var(--admin-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background-color: var(--admin-text-main);
+  color: white;
+}
+
+.btn--secondary:hover {
+  background-color: #000;
+  transform: translateY(-1px);
+}
+
+/* --- ESTRUCTURA DEL DASHBOARD --- */
+.admin-dashboard {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar Oscuro y Elegante */
+.admin-sidebar {
+  width: 260px;
+  background: var(--admin-sidebar-bg);
+  color: var(--admin-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-header h3 span {
+  color: var(--admin-primary);
+}
+
+.sidebar-header p {
+  color: var(--admin-sidebar-text);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  flex: 1;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  color: var(--admin-sidebar-text);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.tab-btn i {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  background: var(--admin-sidebar-hover);
+  color: white;
+}
+
+.tab-btn.active {
+  background: var(--admin-sidebar-hover);
+  color: var(--admin-sidebar-active);
+  border-right: 4px solid var(--admin-primary);
+}
+
+/* Panel Principal (Contenido) */
+.admin-main {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+  background-color: var(--admin-bg);
+}
+
+.admin-main h2 {
+  font-size: 2rem;
+  color: var(--admin-text-main);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Tarjetas de Contenido */
+.admin-card {
+  background: var(--admin-card-bg);
+  border-radius: var(--admin-radius);
+  padding: 2.5rem;
+  box-shadow: var(--admin-shadow);
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--admin-border);
+  max-width: 900px; /* Evita que los formularios sean ridículamente anchos */
+}
+
+.admin-card.list-card {
+  max-width: 100%; /* La tabla sí puede ocupar todo el ancho */
+}
+
+.admin-card h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: var(--admin-text-main);
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-card h3::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background-color: var(--admin-primary);
+  border-radius: 4px;
+}
+
+/* Tablas Modernas */
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-table th, 
+.admin-table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: var(--admin-text-muted);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  background: #f9fafb;
+}
+
+.admin-table th:first-child {
+  border-top-left-radius: var(--admin-radius-sm);
+}
+
+.admin-table th:last-child {
+  border-top-right-radius: var(--admin-radius-sm);
+}
+
+.admin-table td {
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tr:hover td {
+  background-color: #f9fafb;
+}
+
+/* Botón de Eliminar */
+.btn-delete {
+  background: #fee2e2;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--admin-radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.loading-spinner {
+  margin-top: 1rem;
+  color: var(--admin-primary);
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 1rem;
+}

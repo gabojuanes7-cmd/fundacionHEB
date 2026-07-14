@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fix Logos</title></head>
+<body>
+  <h1>Fixing Logos... Check Console</h1>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB8Dz7ZqZFAvpWah-073uUuK2Aa7NVi8D4",
+      authDomain: "hecho-en-bolivia.firebaseapp.com",
+      projectId: "hecho-en-bolivia",
+      storageBucket: "hecho-en-bolivia.firebasestorage.app",
+      messagingSenderId: "616310430469",
+      appId: "1:616310430469:web:572c64d4703ee967d8b56c"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    const fixes = {
+      "SAGITARIO": "https://scontent.fcbb3-1.fna.fbcdn.net/v/t39.30808-6/473076946_1169781491817000_6345875425580486973_n.jpg?stp=dst-jpg_tt6&cstp=mx695x689&ctp=s695x689&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=PqeY23lDBJ0Q7kNvwGrbFee&_nc_oc=AdrV99jF3ctTPPcmiXg3n-03VVsPRZU7UEsxLN-64ux2DBh13w0MqIMAJ38H_vHLyXY&_nc_zt=23&_nc_ht=scontent.fcbb3-1.fna&_nc_gid=HrA24tBKwTkcYlxZxQ6_Jg&_nc_ss=7b2a8&oh=00_AQDLB9okcHrzAj-GrF03-QQnzpLpLlqWfxJZdIYPQktuWg&oe=6A53479A",
+      "Unilever": "https://i0.wp.com/zinklar.com/wp-content/uploads/2024/01/web_case_study_unilever.png?fit=500%2C500&ssl=1",
+      "FACER SRL": "https://scontent.fcbb3-1.fna.fbcdn.net/v/t39.30808-6/306007113_527025066090318_7462935346960848683_n.jpg?stp=dst-jpg_tt6&cstp=mx1111x1062&ctp=s1111x1062&_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9keZOu9eDmIQ7kNvwGtZYM-&_nc_oc=AdrTnecwUfTSi7r-J7e5NBhNN3B3_VbG-sG4yPNiBfek2HDF3W0DrCbRrHl73-91ATw&_nc_zt=23&_nc_ht=scontent.fcbb3-1.fna&_nc_gid=ZEkYajyE5WQmwRpZlrQFUg&_nc_ss=7b2a8&oh=00_AQD0ycKxmOtdNPpkUoJG7CG3J-eX-lnzmizcZfO3shPVjg&oe=6A534098",
+      "Proalbo": "https://scontent.fcbb3-1.fna.fbcdn.net/v/t39.30808-6/281795426_2174367812720556_4438650440515277876_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=mo1M50YnP2cQ7kNvwGYXBRk&_nc_oc=AdrLQTlChJiNEQlRcPOH6dN11P5hMtEWM10Yk2oIm-yahO-5H44UahM-eSKQmnNbHJQ&_nc_zt=23&_nc_ht=scontent.fcbb3-1.fna&_nc_gid=7QkiUuTosyJRDtS6f-oWiQ&_nc_ss=7b2a8&oh=00_AQAkILA8HDg6H6oragw-U9BZ1wSQYgRcGMhgzfXS-v1dXA&oe=6A533C7B",
+      "Copelme": "https://copelme.com/assets/images/logo.png"
+    };
+
+    async function run() {
+      try {
+        console.log("Logging in...");
+        await signInWithEmailAndPassword(auth, "oscar_hechoenbolivia@gmail.com", "HECHOENBOLIVIA082012");
+        console.log("Logged in. Fetching directorio...");
+        const querySnapshot = await getDocs(collection(db, "directorio"));
+        let updated = 0;
+        for (const docSnap of querySnapshot.docs) {
+          const data = docSnap.data();
+          if (fixes[data.nombre]) {
+            console.log(`Updating ${data.nombre}...`);
+            await updateDoc(doc(db, "directorio", docSnap.id), {
+              logoUrl: fixes[data.nombre]
+            });
+            updated++;
+          }
+        }
+        document.body.innerHTML += `<p id="done">Done! Updated ${updated} companies.</p>`;
+        console.log(`Done! Updated ${updated} companies.`);
+      } catch (err) {
+        console.error(err);
+        document.body.innerHTML += `<p id="error" style="color:red">Error: ${err.message}</p>`;
+      }
+    }
+    
+    run();
+  </script>
+</body>
+</html>

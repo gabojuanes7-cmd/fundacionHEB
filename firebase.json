@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*.ps1",
+      "**/*.config",
+      "docs/**",
+      "!docs/REDIRECCIONES/**",
+      "generate-pages.js",
+      "scrape.js",
+      "update-nav.js",
+      "update-services.js",
+      "package.json",
+      "package-lock.json",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "auth": {
+    "providers": {}
+  }
+}

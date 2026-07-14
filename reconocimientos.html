@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Reconocimientos | Fundación Hecho en Bolivia</title>
+  <meta name="description" content="Fundación Hecho en Bolivia: impulsamos el desarrollo económico del país administrando la Marca País y fomentando la producción nacional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Prevent Dark Mode Flash -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jfif">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header header--transparent" data-transparent="true">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Inicio">
+        <div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div>
+      </a>
+
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav__link ">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link ">La Fundación <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="quienes-somos.html" class="dropdown__link">Quiénes Somos</a></li>
+            <li><a href="directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="asistencia-tecnica.html" class="dropdown__link">Asistencia Técnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="sistemas-gestion.html" class="dropdown__link">Sistemas de Gestión</a></li>
+                <li><a href="propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="pulso-economico.html" class="dropdown__link">Pulso Económico</a></li>
+                <li><a href="revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="economia-creativa.html" class="dropdown__link">Economía Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="galeria.html" class="dropdown__link">Galería</a></li>
+            <li><a href="cunas.html" class="dropdown__link">Cuñas Radiales</a></li>
+            <li><a href="spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="noticias.html" class="nav__link ">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Únete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/gallery-event.png') center/cover;">
+      <div class="container">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-family: var(--font-heading); color: white;">Reconocimientos</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9; color: white;">En su trayectoria institucional, la Fundación Hecho en Bolivia ha sido distinguida por diversas entidades nacionales en reconocimiento a su aporte sostenido al desarrollo productivo, social y cultural del país.</p>
+      </div>
+    </section>
+
+    <section class="section section--gray">
+      <div class="container">
+        <div class="grid grid--2" style="gap: 2rem;">
+          
+          <div class="card animated" style="padding: 2.5rem; text-align: center;">
+            <div style="width: 80px; height: 80px; background: rgba(var(--color-primary-rgb), 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+              <i class="fas fa-dove" style="font-size: 2.5rem; color: var(--color-primary);"></i>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-family: var(--font-heading); font-size: 1.5rem;">"Construyendo la Paz"</h3>
+            <p style="color: var(--color-text-muted);">Reconocimiento por su compromiso con la formación y acompañamiento de futuros emprendedores.</p>
+          </div>
+
+          <div class="card animated" style="padding: 2.5rem; text-align: center;">
+            <div style="width: 80px; height: 80px; background: rgba(var(--color-secondary-rgb), 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+              <i class="fas fa-globe-americas" style="font-size: 2.5rem; color: var(--color-secondary);"></i>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-family: var(--font-heading); font-size: 1.5rem;">Proyección Internacional</h3>
+            <p style="color: var(--color-text-muted);">Distinciones por su apoyo a la producción nacional con proyección y alcance en mercados internacionales.</p>
+          </div>
+
+          <div class="card animated" style="padding: 2.5rem; text-align: center;">
+            <div style="width: 80px; height: 80px; background: rgba(46, 204, 113, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+              <i class="fas fa-leaf" style="font-size: 2.5rem; color: #2ecc71;"></i>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-family: var(--font-heading); font-size: 1.5rem;">"Sembrando Vida"</h3>
+            <p style="color: var(--color-text-muted);">Reconocimientos por su activa participación e impacto en la campaña ecológica y social.</p>
+          </div>
+
+          <div class="card animated" style="padding: 2.5rem; text-align: center;">
+            <div style="width: 80px; height: 80px; background: rgba(155, 89, 182, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+              <i class="fas fa-palette" style="font-size: 2.5rem; color: #9b59b6;"></i>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-family: var(--font-heading); font-size: 1.5rem;">Arte y Cultura</h3>
+            <p style="color: var(--color-text-muted);">Méritos por su contribución efectiva al desarrollo del arte y la cultura en el Estado Plurinacional de Bolivia.</p>
+          </div>
+
+        </div>
+        
+        <div class="text-center" style="margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <p style="font-size: 1.1rem; color: var(--color-text-muted); font-style: italic;">"Estas distinciones reflejan el impacto integral de la Fundación, no solo en el ámbito empresarial, sino también en la construcción de ciudadanía, identidad productiva y fortalecimiento del tejido social a nivel nacional."</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo footer__logo"><div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div></a>
+          <p>Fundación sin fines de lucro dedicada a promover el desarrollo económico y la Marca País.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Enlaces</h4>
+          <ul class="footer__links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="capacitate.html"><i class="fas fa-chevron-right"></i> Capacítate Bolivia</a></li>
+            <li><a href="proyectos.html"><i class="fas fa-chevron-right"></i> Proyectos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Fundación</h4>
+          <ul class="footer__links">
+            <li><a href="quienes-somos.html"><i class="fas fa-chevron-right"></i> Misión y Visión</a></li>
+            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Cont�ctanos</h4>
+          <a href="https://maps.google.com/?q=Cochabamba,Bolivia" target="_blank" class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Cochabamba, Bolivia</span></a>
+          <a href="mailto:fundacionhechoenbolivia@gmail.com" class="footer__contact-item"><i class="fas fa-envelope"></i><span>fundacionhechoenbolivia@gmail.com</span></a>
+          <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" class="footer__contact-item"><i class="fab fa-whatsapp"></i><span>+591 71411888</span></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 <strong>Fundación Hecho en Bolivia</strong>. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+  
+  <script src="js/main.js"></script>
+  <script type="module" src="js/public-db.js"></script>
+</body>
+</html>

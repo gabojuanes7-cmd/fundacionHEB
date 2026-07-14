@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Noticias — Fundación Hecho en Bolivia</title>
+  <meta name="description" content="Últimas noticias, eventos y actividades de la Fundación Hecho en Bolivia. Mantente informado sobre nuestro trabajo.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Prevent Dark Mode Flash -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.jfif">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header header--transparent" data-transparent="true">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo"><div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div></a>
+      <nav class="nav" role="navigation">
+        <a href="index.html" class="nav__link ">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link ">La Fundación <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="quienes-somos.html" class="dropdown__link">Quiénes Somos</a></li>
+            <li><a href="directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="asistencia-tecnica.html" class="dropdown__link">Asistencia Técnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="sistemas-gestion.html" class="dropdown__link">Sistemas de Gestión</a></li>
+                <li><a href="propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="pulso-economico.html" class="dropdown__link">Pulso Económico</a></li>
+                <li><a href="revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="economia-creativa.html" class="dropdown__link">Economía Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="galeria.html" class="dropdown__link">Galería</a></li>
+            <li><a href="cunas.html" class="dropdown__link">Cuñas Radiales</a></li>
+            <li><a href="spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="noticias.html" class="nav__link nav__link--active">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Únete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <section class="hero hero--internal">
+      <div class="hero__bg"><img loading="lazy" src="assets/images/gallery-event.png" alt="Eventos de la fundación" loading="eager"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <nav class="breadcrumbs"><a href="index.html">Inicio</a><span class="separator"><i class="fas fa-chevron-right"></i></span><span>Noticias</span></nav>
+        <h1 class="hero__title">Noticias y <span class="highlight">Eventos</span></h1>
+        <p class="hero__subtitle">Mantente al día con nuestras actividades, logros y próximos eventos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="news-layout">
+          <!-- Main Content -->
+          <div>
+            <!-- Institucional -->
+            <h2 class="news-section-heading news-section-heading--inst">Institucional / Fundación</h2>
+            <div id="noticias-institucional-container" class="grid grid--2">
+              <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">Cargando...</div>
+            </div>
+
+            <!-- Nacionales -->
+            <h2 class="news-section-heading news-section-heading--nac">Nacionales</h2>
+            <div id="noticias-nacionales-container" class="grid grid--2">
+              <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">Cargando...</div>
+            </div>
+
+            <!-- Internacionales -->
+            <h2 class="news-section-heading news-section-heading--intl">Internacionales</h2>
+            <div id="noticias-internacionales-container" class="grid grid--2">
+              <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">Cargando...</div>
+            </div>
+
+            <!-- Pulso Económico -->
+            <h2 class="news-section-heading news-section-heading--pulso">Pulso Económico</h2>
+            <div id="noticias-pulso-container" class="grid grid--2">
+              <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">Cargando...</div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <!-- Search -->
+            <div class="sidebar__widget">
+              <h4 class="sidebar__widget-title">Buscar</h4>
+              <div class="sidebar__search">
+                <input type="text" class="form-input" placeholder="Buscar noticias...">
+                <button class="btn btn--primary btn--sm"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar__widget">
+              <h4 class="sidebar__widget-title">Categorías</h4>
+              <ul class="sidebar__categories">
+                <li>Eventos <span>8</span></li>
+                <li>Capacitación <span>5</span></li>
+                <li>Logros <span>4</span></li>
+                <li>Cultura <span>6</span></li>
+                <li>Producción <span>3</span></li>
+                <li>Ferias <span>7</span></li>
+              </ul>
+            </div>
+
+            <!-- Popular -->
+            <div class="sidebar__widget">
+              <h4 class="sidebar__widget-title">Más Populares</h4>
+              <div class="mini-card">
+                <div class="mini-card__img"><img loading="lazy" src="assets/images/project-feria.png" alt="Expo Bolivia"></div>
+                <div>
+                  <div class="mini-card__title">Expo Bolivia Produce bate récord de asistencia</div>
+                  <div class="mini-card__date"><i class="far fa-calendar"></i> Dic 2025</div>
+                </div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card__img"><img loading="lazy" src="assets/images/gallery-landscape.png" alt="Cochabamba"></div>
+                <div>
+                  <div class="mini-card__title">Cochabamba, capital del emprendimiento boliviano</div>
+                  <div class="mini-card__date"><i class="far fa-calendar"></i> Nov 2025</div>
+                </div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card__img"><img loading="lazy" src="assets/images/about-artisans.png" alt="Artesanos"></div>
+                <div>
+                  <div class="mini-card__title">Artesanos bolivianos reciben certificación internacional</div>
+                  <div class="mini-card__date"><i class="far fa-calendar"></i> Oct 2025</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar__widget">
+              <h4 class="sidebar__widget-title">Etiquetas</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Bolivia</span>
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Ferias</span>
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Quinua</span>
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Textiles</span>
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Marca País</span>
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Emprendimiento</span>
+                <span class="filter-btn" style="font-size: var(--text-xs); padding: 4px 12px;">Exportación</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo" style="color: white; font-size: 1.5rem;"><div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div></a>
+          <p>Fundación sin fines de lucro dedicada a promover el desarrollo económico y social de Bolivia.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Enlaces</h4>
+          <ul class="footer__links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="quienes-somos.html"><i class="fas fa-chevron-right"></i> Quiénes Somos</a></li>
+            <li><a href="proyectos.html"><i class="fas fa-chevron-right"></i> Proyectos</a></li>
+            <li><a href="noticias.html"><i class="fas fa-chevron-right"></i> Noticias</a></li>
+            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Cont�ctanos</h4>
+          <a href="https://maps.google.com/?q=Cochabamba,Bolivia" target="_blank" class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Cochabamba, Bolivia</span></a>
+          <a href="mailto:fundacionhechoenbolivia@gmail.com" class="footer__contact-item"><i class="fas fa-envelope"></i><span>fundacionhechoenbolivia@gmail.com</span></a>
+          <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" class="footer__contact-item"><i class="fab fa-whatsapp"></i><span>+591 71411888</span></a>
+        </div>
+        <div>
+          <h4 class="footer__title">Fundación</h4>
+          <ul class="footer__links">
+            <li><a href="quienes-somos.html"><i class="fas fa-chevron-right"></i> Misión y Visión</a></li>
+            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 <strong>Fundación Hecho en Bolivia</strong>. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/public-db.js"></script>
+</body>
+</html>
