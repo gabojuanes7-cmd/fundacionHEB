@@ -1,7 +1,5 @@
 <?php
 $pageTitle = 'Revista Origen | Fundación Hecho en Bolivia';
-<?php
-$pageTitle = 'Revista Origen | Fundación Hecho en Bolivia';
 $pageDescription = 'Descarga nuestro Dossier de Consolidación y otros documentos institucionales.';
 $basePath = '../';
 $activeNav = '';
