@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Servicios | Fundación Hecho en Bolivia</title>
+  <meta name="description" content="Conoce los servicios que ofrece la Fundación Hecho en Bolivia: Red de Marcas, Radio Online, Capacítate, Asistencia Técnica, Propiedad Intelectual y más.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="Fundación Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo económico administrando la Marca País y fomentando la producción nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo.jfif">
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true"><div class="page-loader__spinner"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo" aria-label="Inicio">
+        <div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="../index.html" class="nav__link ">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link ">La Fundación <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../fundacion/quienes-somos.html" class="dropdown__link">Quiénes Somos</a></li>
+            <li><a href="../fundacion/directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="../fundacion/voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="../fundacion/reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../certificaciones/sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="../certificaciones/vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../servicios/red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="../servicios/radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="../servicios/capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="../asistencia/asistencia-tecnica.html" class="dropdown__link">Asistencia Técnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="../asistencia/sistemas-gestion.html" class="dropdown__link">Sistemas de Gestión</a></li>
+                <li><a href="../asistencia/propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="../publicaciones/pulso-economico.html" class="dropdown__link">Pulso Económico</a></li>
+                <li><a href="../publicaciones/revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="../publicaciones/economia-creativa.html" class="dropdown__link">Economía Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../multimedia/galeria.html" class="dropdown__link">Galería</a></li>
+            <li><a href="../multimedia/cunas.html" class="dropdown__link">Cuñas Radiales</a></li>
+            <li><a href="../multimedia/spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="../info/noticias.html" class="nav__link ">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="../info/contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Únete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-header">
+      <div class="container" style="position: relative; z-index: 2;">
+        <i class="fas fa-briefcase" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem; display: block;"></i>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 0.5rem;">Nuestros Servicios</h1>
+        <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.8;">Soluciones integrales para impulsar la producción y el comercio boliviano.</p>
+      </div>
+    </section>
+
+    <!-- Servicios Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center animate-on-scroll" style="margin-bottom: 3rem;">
+          <span class="section-label">Lo que ofrecemos</span>
+          <h2 class="section-title">Servicios de la <span class="text-gradient">Fundación</span></h2>
+        </div>
+
+        <style>
+          .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+          .service-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem; text-align: center; transition: all 0.4s ease; position: relative; overflow: hidden; text-decoration: none; color: inherit; display: block; }
+          .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--accent)); transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
+          .service-card:hover::before { transform: scaleX(1); }
+          .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+          .service-card__icon { width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; transition: all 0.4s ease; }
+          .service-card__icon--vintage { background: linear-gradient(135deg, #8B7355, #6B5B3F); color: #f5e6d0; border: 3px solid #a0926c; }
+          .service-card:hover .service-card__icon--vintage { background: linear-gradient(135deg, #6B5B3F, #4a3f2a); box-shadow: 0 4px 15px rgba(107, 91, 63, 0.4); }
+          .service-card__title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; margin: 0 0 0.5rem; color: var(--text-primary); }
+          .service-card__desc { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5; }
+          .service-card__tag { display: inline-block; background: rgba(var(--primary-rgb), 0.1); color: var(--primary); font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.75rem; }
+        </style>
+
+        <div class="services-grid">
+          <!-- Red de Marcas -->
+          <a href="../servicios/red-marcas.html" class="service-card animate-on-scroll animate-delay-1" id="red-marcas">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h3 class="service-card__title">Red de Marcas</h3>
+            <p class="service-card__desc">Conectamos marcas bolivianas para fortalecer su presencia en el mercado nacional e internacional.</p>
+            <span class="service-card__tag">Comercio</span>
+          </a>
+
+          <!-- Radio Online -->
+          <a href="https://www.facebook.com/CadenaHB/?locale=es_LA" target="_blank" class="service-card animate-on-scroll animate-delay-2" id="radio">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-broadcast-tower"></i>
+            </div>
+            <h3 class="service-card__title">Radio Online</h3>
+            <p class="service-card__desc">Escucha nuestra radio en vivo con contenido sobre industria, economía y cultura boliviana.</p>
+            <span class="service-card__tag">Medios</span>
+          </a>
+
+          <!-- Capacítate -->
+          <a href="../servicios/capacitate.html" class="service-card animate-on-scroll animate-delay-3">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="service-card__title">Capacítate</h3>
+            <p class="service-card__desc">Cursos, talleres y seminarios para el desarrollo empresarial y profesional boliviano.</p>
+            <span class="service-card__tag">Educación</span>
+          </a>
+
+          <!-- Asistencia Técnica -->
+          <a href="#" target="_blank" class="service-card animate-on-scroll animate-delay-1" id="asistencia">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="service-card__title">Asistencia Técnica</h3>
+            <p class="service-card__desc">Asesoramiento especializado para mejorar procesos productivos y calidad empresarial.</p>
+            <span class="service-card__tag">Consultoría</span>
+          </a>
+
+          <!-- Gestión en Propiedad Intelectual -->
+          <a href="../asistencia/propiedad-intelectual.html" class="service-card animate-on-scroll animate-delay-2">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="service-card__title">Gestión en Propiedad Intelectual</h3>
+            <p class="service-card__desc">Protege tu marca, patentes y derechos de autor con nuestro servicio de gestión integral.</p>
+            <span class="service-card__tag">Legal</span>
+          </a>
+
+          <!-- Festival Internacional del Caporal -->
+          <a href="#" target="_blank" class="service-card animate-on-scroll animate-delay-3" id="caporal">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3 class="service-card__title">Festival Int. del Caporal</h3>
+            <p class="service-card__desc">El mayor evento cultural que celebra y promueve la danza del Caporal a nivel internacional.</p>
+            <span class="service-card__tag">Cultura</span>
+          </a>
+
+          <!-- Revista Origen -->
+          <a href="#" target="_blank" class="service-card animate-on-scroll animate-delay-1" id="revista">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="service-card__title">Revista Origen</h3>
+            <p class="service-card__desc">Publicación especializada en industria, economía y la identidad productiva de Bolivia.</p>
+            <span class="service-card__tag">Publicación</span>
+          </a>
+
+          <!-- Pulso Económico -->
+          <a href="../publicaciones/pulso-economico.html" class="service-card animate-on-scroll animate-delay-2">
+            <div class="service-card__icon service-card__icon--vintage">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="service-card__title">Pulso Económico</h3>
+            <p class="service-card__desc">Portal de noticias económicas con indicadores, cotizaciones y análisis del mercado boliviano.</p>
+            <span class="service-card__tag">Economía</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversor como herramienta -->
+    <section class="section section--dark" id="conversor">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 2rem;">
+          <span class="section-label">Herramienta</span>
+          <h2 class="section-title">Conversor de <span class="text-gradient">Moneda</span></h2>
+          <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto;">Cotización del Boliviano (BOB) frente a las principales monedas del mundo.</p>
+        </div>
+        <style>
+          .converter-box-v2 { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2.5rem; max-width: 650px; margin: 0 auto; }
+          .converter-box-v2 h3 { font-family: var(--font-heading); color: var(--primary); margin-bottom: 1.5rem; text-align: center; }
+          .converter-row-v2 { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+          .converter-input-v2 { flex: 1; min-width: 150px; }
+          .converter-input-v2 label { display: block; font-size: var(--text-sm); font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; }
+          .converter-input-v2 input, .converter-input-v2 select { width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--text-base); background: var(--bg-primary); color: var(--text-primary); }
+          .converter-input-v2 input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15); }
+          .converter-result-v2 { text-align: center; margin-top: 1.5rem; padding: 1.5rem; background: rgba(var(--accent-rgb), 0.08); border-radius: var(--radius-md); }
+          .converter-result-v2 .value { font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 800; color: var(--accent-dark); }
+          .converter-swap-v2 { background: var(--primary); color: white; border: none; border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: transform 0.3s ease, background 0.3s ease; flex-shrink: 0; }
+          .converter-swap-v2:hover { background: var(--primary-dark); transform: rotate(180deg); }
+        </style>
+
+        <div class="converter-box-v2">
+          <h3><i class="fas fa-exchange-alt"></i> Convertir Monedas</h3>
+          <div class="converter-row-v2">
+            <div class="converter-input-v2">
+              <label for="sv-conv-amount">Cantidad</label>
+              <input type="number" id="sv-conv-amount" value="100" min="0" step="0.01">
+            </div>
+            <div class="converter-input-v2">
+              <label for="sv-conv-from">De</label>
+              <select id="sv-conv-from">
+                <option value="USD">🇺🇸 USD - Dólar</option>
+                <option value="EUR">🇪🇺 EUR - Euro</option>
+                <option value="BRL">🇧🇷 BRL - Real</option>
+                <option value="ARS">🇦🇷 ARS - Peso Arg.</option>
+                <option value="CLP">🇨🇱 CLP - Peso Chileno</option>
+                <option value="PEN">🇵🇪 PEN - Sol</option>
+                <option value="BOB" selected>🇧🇴 BOB - Boliviano</option>
+              </select>
+            </div>
+            <button class="converter-swap-v2" id="sv-conv-swap" title="Intercambiar"><i class="fas fa-exchange-alt"></i></button>
+            <div class="converter-input-v2">
+              <label for="sv-conv-to">A</label>
+              <select id="sv-conv-to">
+                <option value="USD" selected>🇺🇸 USD - Dólar</option>
+                <option value="EUR">🇪🇺 EUR - Euro</option>
+                <option value="BRL">🇧🇷 BRL - Real</option>
+                <option value="ARS">🇦🇷 ARS - Peso Arg.</option>
+                <option value="CLP">🇨🇱 CLP - Peso Chileno</option>
+                <option value="PEN">🇵🇪 PEN - Sol</option>
+                <option value="BOB">🇧🇴 BOB - Boliviano</option>
+              </select>
+            </div>
+          </div>
+          <div class="converter-result-v2" id="sv-conv-result">
+            <div class="value" id="sv-conv-result-value">—</div>
+            <p style="color: var(--text-muted); font-size: var(--text-sm); margin-top: 0.5rem;" id="sv-conv-result-detail"></p>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: var(--text-xs);">Datos proporcionados por <a href="https://www.exchangerate-api.com/" target="_blank" style="color: var(--primary);">ExchangeRate-API</a> (actualización diaria).</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="header__logo footer__logo"><div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div></a>
+          <p>Fundación sin fines de lucro dedicada a promover el desarrollo económico y la Marca País.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Servicios</h4>
+          <ul class="footer__links">
+            <li><a href="../servicios/capacitate.html"><i class="fas fa-chevron-right"></i> Capacítate</a></li>
+            <li><a href="../asistencia/propiedad-intelectual.html"><i class="fas fa-chevron-right"></i> Propiedad Intelectual</a></li>
+            <li><a href="../publicaciones/pulso-economico.html"><i class="fas fa-chevron-right"></i> Pulso Económico</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contctanos</h4>
+          <a href="https://maps.google.com/?q=Cochabamba,Bolivia" target="_blank" class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Cochabamba, Bolivia</span></a>
+          <a href="mailto:fundacionhechoenbolivia@gmail.com" class="footer__contact-item"><i class="fas fa-envelope"></i><span>fundacionhechoenbolivia@gmail.com</span></a>
+          <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" class="footer__contact-item"><i class="fab fa-whatsapp"></i><span>+591 71411888</span></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 <strong>Fundación Hecho en Bolivia</strong>. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Currency Converter
+    let svExchangeRates = {};
+    async function svFetchRates() {
+      try {
+        const r = await fetch('https://v6.exchangerate-api.com/v6/8f00d9e021e87b0b628e1198/latest/BOB');
+        const d = await r.json();
+        if (d.result === 'success') { svExchangeRates = d.conversion_rates; svConvert(); }
+      } catch(e) { console.error(e); }
+    }
+    function svConvert() {
+      if (!svExchangeRates || !Object.keys(svExchangeRates).length) return;
+      const amt = parseFloat(document.getElementById('sv-conv-amount').value) || 0;
+      const from = document.getElementById('sv-conv-from').value;
+      const to = document.getElementById('sv-conv-to').value;
+      let res;
+      if (from === 'BOB') res = amt * (svExchangeRates[to] || 1);
+      else if (to === 'BOB') res = amt / (svExchangeRates[from] || 1);
+      else { res = (amt / (svExchangeRates[from] || 1)) * (svExchangeRates[to] || 1); }
+      document.getElementById('sv-conv-result-value').textContent = res.toFixed(2) + ' ' + to;
+      document.getElementById('sv-conv-result-detail').textContent = amt.toFixed(2) + ' ' + from + ' = ' + res.toFixed(2) + ' ' + to;
+    }
+    document.getElementById('sv-conv-amount').addEventListener('input', svConvert);
+    document.getElementById('sv-conv-from').addEventListener('change', svConvert);
+    document.getElementById('sv-conv-to').addEventListener('change', svConvert);
+    document.getElementById('sv-conv-swap').addEventListener('click', () => {
+      const f = document.getElementById('sv-conv-from'), t = document.getElementById('sv-conv-to');
+      const tmp = f.value; f.value = t.value; t.value = tmp; svConvert();
+    });
+    document.addEventListener('DOMContentLoaded', svFetchRates);
+  </script>
+</body>
+</html>

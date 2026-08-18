@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>QuiÃ©nes Somos | FundaciÃ³n Hecho en Bolivia</title>
+  <meta name="description" content="FundaciÃ³n Hecho en Bolivia: impulsamos el desarrollo econÃ³mico del paÃ­s administrando la Marca PaÃ­s y fomentando la producciÃ³n nacional.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Prevent Dark Mode Flash -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+
+  <!-- Etiquetas SEO y Open Graph -->
+  <meta property="og:title" content="FundaciÃ³n Hecho en Bolivia">
+  <meta property="og:description" content="Impulsamos el desarrollo econÃ³mico administrando la Marca PaÃ­s y fomentando la producciÃ³n nacional.">
+  <meta property="og:image" content="https://hechoenbolivia.org/assets/images/logo-hecho-en-bolivia.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo.jfif">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header header--transparent" data-transparent="true">
+    <div class="container header__inner">
+      <a href="../index.html" class="header__logo" aria-label="Inicio">
+        <div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div>
+      </a>
+
+      <nav class="nav" role="navigation">
+        <a href="../index.html" class="nav__link ">Inicio</a>
+        
+        <div class="nav__item">
+          <a href="#" class="nav__link nav__link--active">La FundaciÃ³n <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../fundacion/quienes-somos.html" class="dropdown__link">QuiÃ©nes Somos</a></li>
+            <li><a href="../fundacion/directorio.html" class="dropdown__link">Directorio</a></li>
+            <li><a href="../fundacion/voluntariado.html" class="dropdown__link">Voluntariado</a></li>
+            <li><a href="../fundacion/reconocimientos.html" class="dropdown__link">Reconocimientos</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Certificaciones <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../certificaciones/sello.html" class="dropdown__link">Marca Hecho en Bolivia</a></li>
+            <li><a href="../certificaciones/vaon.html" class="dropdown__link">VAON</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Servicios <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../servicios/red-marcas.html" class="dropdown__link">Red de Marcas</a></li>
+            <li><a href="../servicios/radio-online.html" class="dropdown__link">Radio Online HB</a></li>
+            <li><a href="../servicios/capacitate.html" class="dropdown__link">Academia FHB</a></li>
+            <li class="dropdown-submenu">
+              <a href="../asistencia/asistencia-tecnica.html" class="dropdown__link">Asistencia TÃ©cnica <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="../asistencia/sistemas-gestion.html" class="dropdown__link">Sistemas de GestiÃ³n</a></li>
+                <li><a href="../asistencia/propiedad-intelectual.html" class="dropdown__link">Propiedad Intelectual</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown__link">Publicaciones <i class="fas fa-chevron-right"></i></a>
+              <ul class="dropdown-nested">
+                <li><a href="../publicaciones/pulso-economico.html" class="dropdown__link">Pulso EconÃ³mico</a></li>
+                <li><a href="../publicaciones/revista-origen.html" class="dropdown__link">Revista Origen</a></li>
+                <li><a href="../publicaciones/economia-creativa.html" class="dropdown__link">EconomÃ­a Creativa</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__item">
+          <a href="#" class="nav__link ">Multimedia <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="../multimedia/galeria.html" class="dropdown__link">GalerÃ­a</a></li>
+            <li><a href="../multimedia/cunas.html" class="dropdown__link">CuÃ±as Radiales</a></li>
+            <li><a href="../multimedia/spots.html" class="dropdown__link">Spots</a></li>
+          </ul>
+        </div>
+
+        <a href="../info/noticias.html" class="nav__link ">Noticias</a>
+        
+        <button class="theme-toggle" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+        <div class="nav__cta">
+          <a href="../info/contacto.html" class="btn btn--primary btn--sm"><i class="fas fa-handshake"></i> Ãnete</a>
+        </div>
+      </nav>
+      <button class="mobile-toggle" aria-label="Abrir menÃº"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">QuiÃ©nes Somos</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Conoce nuestra historia, misiÃ³n, visiÃ³n y a las personas que trabajan dÃ­a a dÃ­a por impulsar lo "Hecho en Bolivia".</p>
+      </div>
+    </section>
+
+    <!-- Historia -->
+    <section class="section">
+      <div class="container">
+        <div class="split" style="gap: 4rem; align-items: center;">
+          <div>
+            <span class="section-label">Nuestros OrÃ­genes</span>
+            <h2 class="section-title">Historia de la <span class="text-gradient">FundaciÃ³n</span></h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              Nace un 3 de diciembre de 2014. Producto de un grupo de personas, para crear una instituciÃ³n sin fines de lucro que no sea gremial, ni sectorial, ni Departamental; Ser nacional, transversal a todos los sectores.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+              La FUNDACIÃN es la consolidaciÃ³n de la CampaÃ±a âConsume lo Nuestroâ que iniciÃ³ el aÃ±o 2001 con resultados exitosos, hoy es nuestra distinciÃ³n como paÃ­s.
+            </p>
+          </div>
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1577493340887-b7bfff554c45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Historia de la fundaciÃ³n" style="width: 100%; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MisiÃ³n y VisiÃ³n -->
+    <section class="section section--gray">
+      <div class="container">
+        <div class="grid grid--2" style="gap: 3rem;">
+          <div class="card animated" style="text-align: center; padding: 3rem;">
+            <i class="fas fa-bullseye" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1.5rem;"></i>
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">Nuestra MisiÃ³n</h3>
+            <p style="color: var(--color-text-muted);">
+              Contribuir al desarrollo y la integraciÃ³n de los productos y servicios nacionales, promoviendo todo tipo de actividades de promociÃ³n, fomento, capacitaciÃ³n, innovaciÃ³n, premiaciÃ³n e informaciÃ³n, articulando actores y recursos para lograr el crecimiento econÃ³mico y empleo sostenible en un entorno integral y colaborativo.
+            </p>
+          </div>
+          
+          <div class="card animated" style="text-align: center; padding: 3rem;">
+            <i class="fas fa-eye" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 1.5rem;"></i>
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1rem;">Nuestra VisiÃ³n</h3>
+            <p style="color: var(--color-text-muted);">
+              Consolidarnos como el principal ecosistema empresarial del paÃ­s, impulsando el desarrollo, la formalizaciÃ³n y el crecimiento de emprendedores y PYMEs. A travÃ©s de una arquitectura integrada de servicios, buscamos fortalecer la competitividad y sostenibilidad del sector productivo nacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestros Servidores -->
+    <section class="section" id="servidores" style="padding-top: 6rem; padding-bottom: 6rem;">
+      <div class="container text-center">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem; gap: 10px;">
+          <span style="display: inline-block; width: 30px; height: 2px; background-color: var(--color-primary);"></span>
+          <span style="color: var(--color-primary); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">LIDERAZGO</span>
+          <span style="display: inline-block; width: 30px; height: 2px; background-color: var(--color-primary);"></span>
+        </div>
+        <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 6rem; font-weight: 500;">Nuestros Servidores</h2>
+        
+        <div class="grid grid--2" style="gap: 3rem; max-width: 900px; margin: 0 auto;">
+          <!-- Card 1 -->
+          <div class="card animated" style="text-align: center; padding: 2rem; overflow: visible; background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: none;">
+            <div style="margin: -6rem auto 1.5rem auto; width: 200px; height: 220px;">
+               <img loading="lazy" src="../assets/servidores/milton.png" alt="Ing. Milton Encinas MontaÃ±o" style="width: 100%; height: 100%; object-fit: cover; box-shadow: var(--shadow-md);">
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 700;">Ing. Milton Encinas<br>MontaÃ±o</h3>
+            <p style="color: var(--text-primary); font-size: 1rem; font-weight: 600;">Presidente a.i.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="card animated" style="text-align: center; padding: 2rem; overflow: visible; background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: none;">
+            <div style="margin: -6rem auto 1.5rem auto; width: 220px; height: 220px;">
+               <img loading="lazy" src="../assets/servidores/oscar.jpg" alt="Lic. Oscar Buendia Miranda" style="width: 100%; height: 100%; object-fit: cover; box-shadow: var(--shadow-md);">
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 700;">Lic. Oscar Buendia Miranda</h3>
+            <p style="color: var(--text-primary); font-size: 1rem; font-weight: 500;">Gerente General</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="header__logo footer__logo"><div class="header__logo-text">HECHO EN <span>BOLIVIA</span></div></a>
+          <p>FundaciÃ³n sin fines de lucro dedicada a promover el desarrollo econÃ³mico y la Marca "HECHO EN BOLIVIA".</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/FundacionHechoBolivia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionhechoenbolivia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@hechoenbolivia" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/channel/UCmrdnziOy67OzB587EJtAdA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/FHechoenBolivia" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__title">Enlaces</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="../servicios/capacitate.html"><i class="fas fa-chevron-right"></i> Academia FHB</a></li>
+            <li><a href="../servicios/proyectos.html"><i class="fas fa-chevron-right"></i> Proyectos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">FundaciÃ³n</h4>
+          <ul class="footer__links">
+            <li><a href="../fundacion/quienes-somos.html"><i class="fas fa-chevron-right"></i> MisiÃ³n y VisiÃ³n</a></li>
+            <li><a href="../info/contacto.html"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contáctanos</h4>
+          <a href="https://maps.google.com/?q=Cochabamba,Bolivia" target="_blank" class="footer__contact-item"><i class="fas fa-map-marker-alt"></i><span>Cochabamba, Bolivia</span></a>
+          <a href="mailto:fundacionhechoenbolivia@gmail.com" class="footer__contact-item"><i class="fas fa-envelope"></i><span>fundacionhechoenbolivia@gmail.com</span></a>
+          <a href="https://api.whatsapp.com/send?phone=59171411888" target="_blank" class="footer__contact-item"><i class="fab fa-whatsapp"></i><span>+591 71411888</span></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">Â© 2026 <strong>FundaciÃ³n Hecho en Bolivia</strong>. Todos los derechos reservados.</div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></button>
+  
+  <script src="../js/main.js"></script>
+  <script type="module" src="../js/public-db.js"></script>
+</body>
+</html>
